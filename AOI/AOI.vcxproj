@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FA2D37C7-F213-4C4E-B494-CD0E6FF86738}</ProjectGuid>
+    <RootNamespace>AOI</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <Keyword>MFCProj</Keyword>
+    <ProjectName>AOI</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SAPERADIR)\Classes\Gui;$(SAPERADIR)\Classes\Basic;$(SAPERADIR)\Include;$(BOOST_ROOT);$(PYLON_DEV_DIR)\include;$(MVCAM_COMMON_RUNENV)\Includes;$(OPENCV_ROOT)/include;$(OPENCV_ROOT)/include/opencv2;$(HALCONROOT)\include;$(HALCONROOT)\include\halconcpp;$(OPENCV_ROOT)/include/opencv;$(IncludePath)</IncludePath>
+    <LibraryPath>$(BOOST_ROOT)\stage_x64_vs2015\lib;$(PYLON_DEV_DIR)\Lib\x64;$(SAPERADIR)\Lib\Win64;$(SAPERADIR)\Lib\Win64\VS2013;$(MVCAM_COMMON_RUNENV)\Libraries\win64;$(OPENCV_ROOT);$(HALCONROOT)\lib\$(HALCONARCH);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(BOOST_ROOT);$(PYLON_DEV_DIR)\include;$(SAPERADIR)\Classes\Gui;$(SAPERADIR)\Classes\Basic;$(SAPERADIR)\Include;$(MVCAM_COMMON_RUNENV)\Includes;$(OPENCV_ROOT)\include;$(OPENCV_ROOT)\include\opencv2;$(HALCONROOT)\include;$(HALCONROOT)\include\halconcpp;$(IncludePath)</IncludePath>
+    <LibraryPath>$(BOOST_ROOT)\stage_x64_vs2015\lib;$(PYLON_DEV_DIR)\Lib\x64;$(SAPERADIR)\Lib\Win64;$(SAPERADIR)\Lib\Win64\VS2013;$(MVCAM_COMMON_RUNENV)\Libraries\win64;$(OPENCV_ROOT);$(HALCONROOT)\lib\$(HALCONARCH);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;_DEBUG;TIXML_USE_STL;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalOptions>-D_SCL_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4129;4800;4819</DisableSpecificWarnings>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <MinimalRebuild>true</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalDependencies>SapClassGui.lib;SapClassBasic.lib;corapi.lib;sqlite3.lib;MvCameraControl.lib;opencv_world331d.lib;halconcpp.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(PYLON_DEV_DIR)\lib\x64</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>opencv_world331d.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PreBuildEvent>
+      <Command>IF EXIST $(SolutionDir)InstallPackage (rd /S /Q $(SolutionDir)InstallPackage)
+IF EXIST  $(TargetDir)ui_pictures (rd /S /Q  $(TargetDir)ui_pictures)
+IF EXIST $(TargetDir)$(TargetFileName).config (rd /S /Q $(TargetDir)$(TargetFileName).config)
+copy $(TargetDir)AOIAlgo.dll $(ProjectDir)
+</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>md $(TargetDir)ui_pictures
+copy $(ProjectDir)sqlite3.dll $(TargetDir)
+copy $(ProjectDir)opencv_world331d.dll $(TargetDir)
+copy $(ProjectDir)opencv_world331d.lib $(TargetDir)
+xcopy /s/e $(ProjectDir)res  $(TargetDir)ui_pictures /EXCLUDE:$(SolutionDir)EXCLUDE.txt
+xcopy /s/e $(SolutionDir)$(Platform)\$(Configuration) $(SolutionDir)InstallPackage\ /y /EXCLUDE:$(SolutionDir)EXCLUDE.txt</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_WINDOWS;NDEBUG;TIXML_USE_STL;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalOptions>-D_SCL_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4129;4800;4819</DisableSpecificWarnings>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <MinimalRebuild>true</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>SapClassGui.lib;SapClassBasic.lib;corapi.lib;MvCameraControl.lib;opencv_world331.lib;halconcpp.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(PYLON_DEV_DIR)\lib\x64</AdditionalLibraryDirectories>
+      <PerUserRedirection>true</PerUserRedirection>
+      <DelayLoadDLLs>opencv_world331.dll</DelayLoadDLLs>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PreBuildEvent>
+      <Command>IF EXIST $(SolutionDir)InstallPackage (rd /S /Q $(SolutionDir)InstallPackage)
+IF EXIST  $(TargetDir)ui_pictures (rd /S /Q  $(TargetDir)ui_pictures)
+IF EXIST $(TargetDir)$(TargetFileName).config (rd /S /Q $(TargetDir)$(TargetFileName).config)
+copy $(TargetDir)AOIAlgo.dll $(ProjectDir)</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>md $(TargetDir)ui_pictures
+copy $(ProjectDir)sqlite3.dll $(TargetDir)
+copy $(ProjectDir)opencv_world331.dll $(TargetDir)
+copy $(ProjectDir)opencv_world331.lib $(TargetDir)
+xcopy /s/e $(ProjectDir)res  $(TargetDir)ui_pictures /EXCLUDE:$(SolutionDir)EXCLUDE.txt
+xcopy /s/e $(SolutionDir)$(Platform)\$(Configuration) $(SolutionDir)InstallPackage\ /y /EXCLUDE:$(SolutionDir)EXCLUDE.txt
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="..\EXCLUDE.txt" />
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\tinxml\tinystr.h" />
+    <ClInclude Include="..\tinxml\tinyxml.h" />
+    <ClInclude Include="BaslerCamera.h" />
+    <ClInclude Include="bounded_buffer.h" />
+    <ClInclude Include="CameraBase.h" />
+    <ClInclude Include="CameraSettingDlg.h" />
+    <ClInclude Include="ComboBoxCtrl.h" />
+    <ClInclude Include="ConfigFileCpyDlg.h" />
+    <ClInclude Include="ConfigFileManager.h" />
+    <ClInclude Include="CopyProjectDlg.h" />
+    <ClInclude Include="CppSQLite3.h" />
+    <ClInclude Include="CreateBMP.h" />
+    <ClInclude Include="CvvImage.h" />
+    <ClInclude Include="DispResultInfoDlg.h" />
+    <ClInclude Include="EditEx.h" />
+    <ClInclude Include="FileMapping.h" />
+    <ClInclude Include="HttpHelper.h" />
+    <ClInclude Include="ImgShowWnd.h" />
+    <ClInclude Include="ImgShowWndListener.h" />
+    <ClInclude Include="LogViewerDlg.h" />
+    <ClInclude Include="RectangleROI.h" />
+    <ClInclude Include="ROIBase.h" />
+    <ClInclude Include="SuperListCtrl.h" />
+    <ClInclude Include="SuperListCtrListener.h" />
+    <ClInclude Include="VieworksCamera.h" />
+    <ClInclude Include="DBControl.h" />
+    <ClInclude Include="DebugDlg.h" />
+    <ClInclude Include="DemuraStation.h" />
+    <ClInclude Include="HelpDlg.h" />
+    <ClInclude Include="HikCamera.h" />
+    <ClInclude Include="LabelCtrl.h" />
+    <ClInclude Include="LoadingDlg.h" />
+    <ClInclude Include="MessageDlg.h" />
+    <ClInclude Include="AOI.h" />
+    <ClInclude Include="AOIDlg.h" />
+    <ClInclude Include="PatternProcessor.h" />
+    <ClInclude Include="ProjectSettingDlg.h" />
+    <ClInclude Include="QueryDlg.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SerialPort.h" />
+    <ClInclude Include="sqlite3.h" />
+    <ClInclude Include="sqlite3ext.h" />
+    <ClInclude Include="SqliteDB.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="SystemConfigDlg.h" />
+    <ClInclude Include="SystemLogger.h" />
+    <ClInclude Include="SystemLoginDlg.h" />
+    <ClInclude Include="SystemManager.h" />
+    <ClInclude Include="SystemUserManagementDlg.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TypeDef.h" />
+    <ClInclude Include="ui_decorator.h" />
+    <ClInclude Include="utf8conv.h" />
+    <ClInclude Include="utils.h" />
+    <ClInclude Include="WindowbackgroundBrushHelper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\tinxml\tinystr.cpp" />
+    <ClCompile Include="..\tinxml\tinyxml.cpp" />
+    <ClCompile Include="..\tinxml\tinyxmlerror.cpp" />
+    <ClCompile Include="..\tinxml\tinyxmlparser.cpp" />
+    <ClCompile Include="BaslerCamera.cpp" />
+    <ClCompile Include="CameraBase.cpp" />
+    <ClCompile Include="CameraSettingDlg.cpp" />
+    <ClCompile Include="ComboBoxCtrl.cpp" />
+    <ClCompile Include="ConfigFileCpyDlg.cpp" />
+    <ClCompile Include="CopyProjectDlg.cpp" />
+    <ClCompile Include="CppSQLite3.cpp" />
+    <ClCompile Include="CvvImage.cpp" />
+    <ClCompile Include="DispResultInfoDlg.cpp" />
+    <ClCompile Include="EditEx.cpp" />
+    <ClCompile Include="FileMapping.cpp" />
+    <ClCompile Include="HttpHelper.cpp" />
+    <ClCompile Include="ImgShowWnd.cpp" />
+    <ClCompile Include="lib_json\json_reader.cpp" />
+    <ClCompile Include="lib_json\json_value.cpp" />
+    <ClCompile Include="lib_json\json_writer.cpp" />
+    <ClCompile Include="LogViewerDlg.cpp" />
+    <ClCompile Include="RectangleROI.cpp" />
+    <ClCompile Include="ROIBase.cpp" />
+    <ClCompile Include="SuperListCtrl.cpp" />
+    <ClCompile Include="VieworksCamera.cpp" />
+    <ClCompile Include="DBControl.cpp" />
+    <ClCompile Include="DebugDlg.cpp" />
+    <ClCompile Include="DemuraStation.cpp" />
+    <ClCompile Include="HelpDlg.cpp" />
+    <ClCompile Include="HikCamera.cpp" />
+    <ClCompile Include="LabelCtrl.cpp" />
+    <ClCompile Include="LoadingDlg.cpp" />
+    <ClCompile Include="MessageDlg.cpp" />
+    <ClCompile Include="AOI.cpp" />
+    <ClCompile Include="AOIDlg.cpp" />
+    <ClCompile Include="PatternProcessor.cpp" />
+    <ClCompile Include="ProjectSettingDlg.cpp" />
+    <ClCompile Include="QueryDlg.cpp" />
+    <ClCompile Include="SerialPort.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SystemConfigDlg.cpp" />
+    <ClCompile Include="SystemLogger.cpp" />
+    <ClCompile Include="SystemLoginDlg.cpp" />
+    <ClCompile Include="SystemManager.cpp" />
+    <ClCompile Include="SystemUserManagementDlg.cpp" />
+    <ClCompile Include="utils.cpp" />
+    <ClCompile Include="WindowbackgroundBrushHelper.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="AOI.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\AOI.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\add_left.png" />
+    <Image Include="res\add_right.png" />
+    <Image Include="res\algorithm.png" />
+    <Image Include="res\apply.bmp" />
+    <Image Include="res\apply.ico" />
+    <Image Include="res\background.bmp" />
+    <Image Include="res\camera_add.png" />
+    <Image Include="res\camera_delete.png" />
+    <Image Include="res\camera_find_again.png" />
+    <Image Include="res\camera_save.png" />
+    <Image Include="res\camera_setting.png" />
+    <Image Include="res\camera_setting_selected.png" />
+    <Image Include="res\close.png" />
+    <Image Include="res\debug_screen.bmp" />
+    <Image Include="res\decrease.bmp" />
+    <Image Include="res\delete.png" />
+    <Image Include="res\enquire.png" />
+    <Image Include="res\error.png" />
+    <Image Include="res\first.png" />
+    <Image Include="res\folder.png" />
+    <Image Include="res\folder_disabled.png" />
+    <Image Include="res\help.png" />
+    <Image Include="res\increase.bmp" />
+    <Image Include="res\language.png" />
+    <Image Include="res\language_deny.png" />
+    <Image Include="res\last.png" />
+    <Image Include="res\lead_logo.png" />
+    <Image Include="res\light_setting.png" />
+    <Image Include="res\light_setting_selected.png" />
+    <Image Include="res\lock.png" />
+    <Image Include="res\log_on.png" />
+    <Image Include="res\log_out.png" />
+    <Image Include="res\motion_card.png" />
+    <Image Include="res\AOI.ico" />
+    <Image Include="res\next.png" />
+    <Image Include="res\onecircle.png" />
+    <Image Include="res\pattern_setting.png" />
+    <Image Include="res\pattern_setting_selected.png" />
+    <Image Include="res\pg_setting.png" />
+    <Image Include="res\pg_setting_selected.png" />
+    <Image Include="res\previous.png" />
+    <Image Include="res\run.png" />
+    <Image Include="res\save.png" />
+    <Image Include="res\savemultiple.png" />
+    <Image Include="res\savesingle.png" />
+    <Image Include="res\shutdown .png" />
+    <Image Include="res\shutdown _deny.png" />
+    <Image Include="res\shutdown.png" />
+    <Image Include="res\shutdown_deny.png" />
+    <Image Include="res\stop.png" />
+    <Image Include="res\system_config_dlg.bmp" />
+    <Image Include="res\system_setting.png" />
+    <Image Include="res\system_setting_deny.png" />
+    <Image Include="res\unlock.png" />
+    <Image Include="res\user_management.png" />
+    <Image Include="res\user_management_deny.png" />
+    <Image Include="res\warning.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="AOI.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

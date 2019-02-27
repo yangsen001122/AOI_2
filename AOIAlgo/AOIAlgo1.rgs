@@ -1,0 +1,16 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {1F242161-B56D-4E31-B36B-377D90C247C6} = s 'AOIAlgo Class'
+		{
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{B70A63D5-E183-41C5-A0CE-9756DF4875C5}'
+			Version = s '1.0'
+		}
+	}
+}

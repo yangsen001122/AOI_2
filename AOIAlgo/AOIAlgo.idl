@@ -1,0 +1,45 @@
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(7E13BEF9-BB0F-46B1-883B-37FC716C9AA3),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]	
+interface IAOIAlgo : IDispatch{
+	[id(1), local] HRESULT SetCurrentImage([in] LONGLONG* pImg);
+	[id(2), local] HRESULT GetResultImg([out] LONGLONG* pRgn,[out] LONG* nResultOK);
+	[id(3), local] HRESULT GetMainMatrix2D([in]BYTE rgnID, [in] VARIANT* ThVaule, [in] VARIANT* MaskSize,[in] VARIANT* MapWSize, [in] VARIANT* MapHSize);
+	[id(4), local] HRESULT GetMainMatrix2DHelp([out, retval]BSTR* pHelpStr);
+	[id(5), local] HRESULT GetSubMatrix2D([in] BYTE RgnID,[in] VARIANT* ThParam,[in] VARIANT* ShParam,[in] VARIANT* MaxDisParam, [in] VARIANT* MaxDisParam2, [in] VARIANT* LhParam, [in] VARIANT* WhParam, [in] VARIANT* DaParam);
+	[id(6), local] HRESULT GetSubMatrix2DHelp([out, retval]BSTR* pHelpStr);
+
+	[id(7), local] HRESULT SetCalculateMainMatrixFlag([in] BYTE nFlag);
+	[id(8), local] HRESULT SetSubMatrixRotateFlag([in] LONG nRotateAngle);
+	[id(9), local] HRESULT VAGetMainMatrix2D([in] BYTE rgnID, [in] VARIANT* MaskSize, [in] VARIANT* MeasureThs, [in] VARIANT* MapWSize, [in] VARIANT* MapHSize);
+	[id(10), local] HRESULT VAGetMainMatrix2DHelp([out, retval] BSTR* pHelpStr);
+	[id(11), local] HRESULT VAGetSubMatrix2D([in] BYTE rgnID, [in] VARIANT* MaskSize, [in] VARIANT* LineMinLength, [in] VARIANT* MapWSize, [in] VARIANT* MapHSize);
+	[id(12), local] HRESULT VAGetSubMatrix2DHelp([out, retval] BSTR* pHelpStr);
+	[id(13), local] HRESULT VAGetResultImage([out] LONGLONG* pImg);
+	[id(14), local] HRESULT VASetInputImage([in] LONGLONG* pImg);
+	[id(15), local] HRESULT VACheckResultImage([out] LONG* nResultOK);
+	[id(16), local] HRESULT GetBackGroundValue([out] DOUBLE* dBgValue);
+};
+[
+	uuid(B70A63D5-E183-41C5-A0CE-9756DF4875C5),
+	version(1.0),
+]
+library AOIAlgoLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(1F242161-B56D-4E31-B36B-377D90C247C6)		
+	]
+	coclass AOIAlgo
+	{
+		[default] interface IAOIAlgo;
+	};
+};
+

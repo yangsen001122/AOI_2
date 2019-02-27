@@ -1,0 +1,8 @@
+\data
+\database
+\algo_log
+\pictures
+.ico
+.bmp
+.rc
+.rc2
